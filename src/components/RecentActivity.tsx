@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Clock, AlertTriangle, Play } from "lucide-react";
+import { CheckCircle, Clock, Play } from "lucide-react";
 
 const activities = [
   {
@@ -26,13 +26,6 @@ const activities = [
     icon: Clock,
   },
   {
-    id: 4,
-    workflow: "Database Backup",
-    status: "failed",
-    time: "15 minutes ago",
-    icon: AlertTriangle,
-  },
-  {
     id: 5,
     workflow: "Customer Onboarding",
     status: "completed",
@@ -49,8 +42,6 @@ const getStatusColor = (status: string) => {
       return "text-blue-400 bg-blue-400/20";
     case "scheduled":
       return "text-yellow-400 bg-yellow-400/20";
-    case "failed":
-      return "text-red-400 bg-red-400/20";
     default:
       return "text-gray-400 bg-gray-400/20";
   }

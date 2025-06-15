@@ -1,5 +1,5 @@
 
-import { Activity, Clock, CheckCircle, AlertTriangle, TrendingUp } from "lucide-react";
+import { Activity, Clock, CheckCircle, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { WorkflowChart } from "./WorkflowChart";
 import { RecentActivity } from "./RecentActivity";
@@ -27,13 +27,6 @@ export const Dashboard = () => {
       icon: CheckCircle,
       color: "text-blue-400",
     },
-    {
-      title: "Failed Tasks",
-      value: "3",
-      change: "-45%",
-      icon: AlertTriangle,
-      color: "text-red-400",
-    },
   ];
 
   return (
@@ -45,7 +38,7 @@ export const Dashboard = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
           return (
