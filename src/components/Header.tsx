@@ -1,5 +1,5 @@
 
-import { Search, Bell, User, Settings } from "lucide-react";
+import { Search, Bell, User, Settings, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -9,7 +9,7 @@ export const Header = () => {
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">W</span>
+            <Workflow className="text-white w-5 h-5" />
           </div>
           <h1 className="text-xl font-bold gradient-text">WorkflowAI</h1>
         </div>
