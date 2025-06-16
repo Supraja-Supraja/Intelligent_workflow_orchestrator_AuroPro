@@ -37,20 +37,24 @@ export const Sidebar = ({ activeTab, setActiveTab }: SidebarProps) => {
         <nav className="space-y-2">
           {menuItems.map((item) => {
             const Icon = item.icon;
+            const isActive = activeTab === item.id;
             return (
               <Button
                 key={item.id}
                 variant="ghost"
                 className={cn(
-                  "w-full justify-start text-left hover:bg-white/10 transition-all duration-200",
-                  activeTab === item.id 
-                    ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border-r-2 border-cyan-400" 
+                  "w-full justify-start text-left hover:bg-white/10 transition-all duration-200 relative",
+                  isActive 
+                    ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400" 
                     : "text-muted-foreground hover:text-white"
                 )}
                 onClick={() => setActiveTab(item.id)}
               >
                 <Icon className="mr-3 h-4 w-4" />
                 {item.label}
+                {isActive && (
+                  <div className="absolute right-0 top-0 bottom-0 w-1 bg-cyan-400 rounded-l-sm" />
+                )}
               </Button>
             );
           })}
