@@ -1,5 +1,6 @@
 
-import { Search, Bell, User, Settings, Workflow, ChevronDown, HelpCircle, LogOut, CreditCard } from "lucide-react";
+
+import { Search, Bell, User, Settings, Workflow, ChevronDown, HelpCircle, LogOut, CreditCard, Palette, Shield, Eye, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -63,6 +64,22 @@ export const Header = () => {
               <span>Settings</span>
             </DropdownMenuItem>
             <DropdownMenuItem className="text-white hover:bg-slate-700 cursor-pointer">
+              <Palette className="mr-2 h-4 w-4" />
+              <span>Themes</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-white hover:bg-slate-700 cursor-pointer">
+              <Shield className="mr-2 h-4 w-4" />
+              <span>Privacy</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-white hover:bg-slate-700 cursor-pointer">
+              <Eye className="mr-2 h-4 w-4" />
+              <span>Visibility</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-white hover:bg-slate-700 cursor-pointer">
+              <Globe className="mr-2 h-4 w-4" />
+              <span>Language</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-white hover:bg-slate-700 cursor-pointer">
               <HelpCircle className="mr-2 h-4 w-4" />
               <span>Help</span>
             </DropdownMenuItem>
@@ -77,3 +94,4 @@ export const Header = () => {
     </header>
   );
 };
+
