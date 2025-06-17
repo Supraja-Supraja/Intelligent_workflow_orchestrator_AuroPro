@@ -6,6 +6,7 @@ import { Dashboard } from "@/components/Dashboard";
 import { WorkflowCreator } from "@/components/WorkflowCreator";
 import { WorkflowList } from "@/components/WorkflowList";
 import { ScheduleManager } from "@/components/ScheduleManager";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -30,8 +31,11 @@ const Index = () => {
       <Header />
       <div className="flex">
         <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-        <main className="flex-1 p-6 ml-64">
-          {renderContent()}
+        <main className="flex-1 ml-64">
+          <div className="p-6">
+            {renderContent()}
+          </div>
+          <Footer />
         </main>
       </div>
     </div>
