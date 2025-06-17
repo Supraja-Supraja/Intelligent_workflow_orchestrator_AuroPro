@@ -3,6 +3,7 @@ import { Activity, Clock, CheckCircle, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { WorkflowChart } from "./WorkflowChart";
 import { RecentActivity } from "./RecentActivity";
+import { Footer } from "./Footer";
 
 export const Dashboard = () => {
   const stats = [
@@ -69,6 +70,8 @@ export const Dashboard = () => {
           <RecentActivity />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
